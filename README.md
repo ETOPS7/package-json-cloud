@@ -13,4 +13,4 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### JSON parser here `collect-dependencies.js`
-### Result dependencies here `dependency-counts.json`
+### Result dependencies here `src/dependency-counts.json`

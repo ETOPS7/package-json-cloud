@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import { TagCloud } from 'react-tagcloud'
 
 //! You can use different word cloud libraries WordCloud from 'react-d3-cloud'
