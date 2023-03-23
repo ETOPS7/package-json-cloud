@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { TagCloud } from 'react-tagcloud'
 
-function App() {
+//! You can use different word cloud libraries WordCloud from 'react-d3-cloud'
+// import WordCloud from 'react-d3-cloud'
+// import { scaleOrdinal } from 'd3-scale'
+// import { schemeCategory10 } from 'd3-scale-chromatic'
+import data from './dependency-counts.json'
+
+const ignoreWords = ['babel', 'webpack', '@types']
+
+//! Uncommented code if you need WordCloud from 'react-d3-cloud'
+// const wordCloudData = data
+//   .map((item) => ({
+//     text: item.value,
+//     value: item.count * 5,
+//   }))
+//   .filter((item) => !ignoreWords.some((word)=>item.text.includes(word)))
+
+const wordCloudDataLine = data
+  .map((item) => ({
+    value: item.value,
+    count: item.count,
+  }))
+  .filter((item) => !ignoreWords.some((word) => item.value.includes(word)))
+
+//! Uncommented code if you need WordCloud from 'react-d3-cloud'
+// const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10)
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      {/* <WordCloud
+        data={wordCloudData}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        font="Times"
+        fontWeight="bold"
+        fontSize={(word) => Math.log2(word.value) * 5}
+        spiral="rectangular"
+        rotate={(word) => word.value % 360}
+        padding={5}
+        random={Math.random}
+        fill={(d, i) => schemeCategory10ScaleOrdinal(i)}
+      /> */}
 
-export default App;
+      <TagCloud minSize={12} maxSize={35} tags={wordCloudDataLine} />
+    </div>
+  )
+}

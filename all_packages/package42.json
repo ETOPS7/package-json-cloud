@@ -1,0 +1,33 @@
+{
+  "name": "xla-technodemo-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test ./test/Demo.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.amberservice.link:xla/techodemo/xla-technodemo-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.1",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@truffle/contract": "^4.5.11",
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "bignumber.js": "^9.0.2",
+    "dotenv": "^16.0.1",
+    "web3": "^1.7.3",
+    "ws": "^8.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.0.0"
+  }
+}
