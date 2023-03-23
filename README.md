@@ -1,4 +1,4 @@
-# Loonshots Tech dependencies wordcloud
+# ♻️ Loonshots Tech dependencies wordcloud
 
 This React project showcases a wordcloud of dependencies and technologies used in previous `Loonshots` projects. The wordcloud is generated from `Dependencies` and `devDependencies` sections of `package.json` files extracted from our `GitLab` repositories.
 ## Available Scripts
